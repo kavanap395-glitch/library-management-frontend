@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Books</title>
+    <link rel="stylesheet" href="add-issue.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Library Admin</h2>
+        <ul>
+            <li><a href="Admin-dashboard.html">Dashboard</a></li>
+            <li><a href="manage-books.html">Manage Books</a></li>
+            <li><a href="add-issue.html">Issue Books</a></li>
+            <li><a href="return-books.html">Return Books</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+
+<div class="container">
+    <h1>Issue Book</h1>
+
+    <!-- Issue Form -->
+    <div class="form">
+        <input type="text" id="bookName" placeholder="Book Name">
+        <input type="text" id="userName" placeholder="User Name">
+        <input type="date" id="issueDate">
+        <input type="date" id="dueDate">
+        <button onclick="issueBook()">Issue Book</button>
+    </div>
+
+    <!-- Issued Books Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>User</th>
+                <th>Issue Date</th>
+                <th>Due Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="issueList">
+            <!-- Data from JS -->
+        </tbody>
+    </table>
+</div>
+
+<script src="add-issue.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Reports</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+<div class="sidebar">
+        <h2>Library Admin</h2>
+        <ul>
+            <li><a href="Admin-dashboard.html">Dashboard</a></li>
+            <li><a href="manage-books.html">Manage Books</a></li>
+            <li><a href="add-issue.html">Issue Books</a></li>
+            <li><a href="return-books.html">Return Books</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+<div class="container">
+    <h1>Library Reports</h1>
+
+    <form action="ReportServlet" method="post">
+        <label>Select Report Type:</label>
+        
+        <select name="reportType">
+            <option value="issued">Issued Books</option>
+            <option value="returned">Returned Books</option>
+            <option value="overdue">Overdue Books</option>
+        </select>
+
+        <button type="submit">Generate Report</button>
+    </form>
+</div>
+
+</body>
+</html>

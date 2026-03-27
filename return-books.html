@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return Books</title>
+    <link rel="stylesheet" href="return.css">
+</head>
+<body>
+<div class="sidebar">
+        <h2>Library Admin</h2>
+        <ul>
+            <li><a href="Admin-dashboard.html">Dashboard</a></li>
+            <li><a href="manage-books.html">Manage Books</a></li>
+            <li><a href="add-issue.html">Issue Books</a></li>
+            <li><a href="return-books.html">Return Books</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+<div class="container">
+    <h1>Return Book</h1>
+
+    <!-- Return Form -->
+    <div class="form">
+        <input type="text" id="bookName" placeholder="Book Name">
+        <input type="text" id="userName" placeholder="User Name">
+        <input type="date" id="returnDate">
+        <input type="date" id="dueDate">
+        <button onclick="returnBook()">Return Book</button>
+    </div>
+
+    <!-- Returned Books Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>User</th>
+                <th>Due Date</th>
+                <th>Return Date</th>
+                <th>Fine</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="returnList">
+            <!-- Data from JS -->
+        </tbody>
+    </table>
+</div>
+
+<script src="return.js"></script>
+
+</body>
+</html>
