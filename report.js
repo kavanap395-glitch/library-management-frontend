@@ -1,22 +1,15 @@
-// Wait for page load
-document.addEventListener("DOMContentLoaded", function () {
+const API = "https://library-management-backend-88w2.onrender.com";
 
-    const form = document.querySelector("form");
+document.querySelector("form").addEventListener("submit", async function(e) {
+    e.preventDefault();
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault(); // stop actual form submit
+    let res = await fetch(API + "/api/reports");
+    let data = await res.json();
 
-        let reportType = document.querySelector("select").value;
-
-        if (reportType === "issued") {
-            alert("Showing Issued Books Report");
-        } 
-        else if (reportType === "returned") {
-            alert("Showing Returned Books Report");
-        } 
-        else if (reportType === "overdue") {
-            alert("Showing Overdue Books Report");
-        }
-    });
-
+    alert(
+        "Total Books: " + data.books +
+        "\nIssued: " + data.issued +
+        "\nReturned: " + data.returned +
+        "\nTotal Fine: ₹" + data.totalFine
+    );
 });
